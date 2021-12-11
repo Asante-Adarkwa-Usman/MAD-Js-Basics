@@ -1,8 +1,9 @@
 import mongoose from 'mongoose';
 //Destructuring
 const {Schema, model} = mongoose;
+
 //Use Schema to structure the data in the DB
- const todoSchema = Schema({
+ const todoSchema =  Schema({
      todoTitle:{
      type:String,
      required:true
@@ -19,8 +20,8 @@ const {Schema, model} = mongoose;
 //     }
 // });
 
-const todoModel = model('mad-todos',todoSchema);
-//  export const todoUserModel = model('mad-todo-users',todoUserSchema);
+ export const todoModel = model('mad-todos',todoSchema);
+//export const todoUserModel = model('mad-todo-users',todoUserSchema);
 export default todoModel;
 
 //types of exports

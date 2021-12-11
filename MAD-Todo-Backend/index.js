@@ -52,13 +52,13 @@ return res.status(500).json({
 app.get('/todos/:category',async (req, res)=>{
  const {category} = req.params;
  //const category = req.params.category;
- const allCategoryTodos = await todoModel.find({})
+ const todosByCategory = await todoModel.find({})
  .where("category").equals(category);
- if(allCategoryTodos){
+ if(todosByCategory){
  //success
  return res.status(200).json({
      message: `${category} todos fetched successfully`,
-     data: allCategoryTodos
+     data: todosByCategory
  });
  }else{
     //error
@@ -89,6 +89,8 @@ return res.status(200).json({
 }
 })
 
+
+
 //delete a todo
 app.delete('/todo/:id', async (req, res)=> {
 const {id} = req.params;
@@ -107,11 +109,6 @@ if(deletedTodo){
     })
 }
 })
-
-
-
-
-
 
 
 
