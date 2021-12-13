@@ -1,6 +1,9 @@
 {
   "name": "mad-todo-backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.x"
+  },
   "description": "A backend service for a todo mobile app",
   "main": "index.js",
   "type": "module",
@@ -27,4 +30,5 @@
     "mongoose": "^6.1.0",
     "nodemon": "^2.0.15"
   }
+ 
 }
