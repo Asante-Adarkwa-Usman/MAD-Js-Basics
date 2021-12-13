@@ -13,7 +13,7 @@ app.use(express.json());
 
 const PORT = 3000 || process.env.PORT;
 
-const db = process.env.DB_URL;
+const db = process.env.URL;
 
 mongoose.connect(db, {
     useNewUrlParser: true,
